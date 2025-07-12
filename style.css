@@ -1,0 +1,78 @@
+:root {
+    --primary-color: #333;
+    --background-color: #f4f4f4;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+footer {
+    margin-top: auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+main {
+    flex-grow: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gallery-container {
+    width: 100%;
+    max-width: 800px; /* Max width for larger screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center the content */
+    gap: 2rem; /* Space between images */
+}
+
+#gallery-container img,
+#gallery-container .image-placeholder {
+    width: 100%; /* Make image fill the container */
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #eee; /* Placeholder background */
+}
+
+#gallery-container img {
+    background-color: transparent;
+}
+
+/* For mobile devices */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    main {
+        padding: 0.5rem;
+    }
+}
